@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header h1 {
+            color: #fff;
+            font-size: 2em;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #fcb69f;
+        }
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: #fff;
+            padding: 0 20px;
+        }
+        .hero-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ff3b3b;
+        }
+        .content-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .skills-list span {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ddd;
+            margin: 5px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .skills-list span:hover {
+            background: #fcb69f;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+        }
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+        footer .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="highlight">My</span> Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+            <p>A Passionate Web Developer & Designer</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>I am a front-end developer who loves crafting stunning web experiences. With expertise in HTML, CSS, and JavaScript, I design responsive, interactive websites.</p>
+    </section>
+
+    <section id="projects" class="content-section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1: Recipe Blog</h3>
+                <p>A dynamic recipe-sharing platform built using React and Express.</p>
+                <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: SmartSign</h3>
+                <p>An IoT-based sign language to speech converter.</p>
+                <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 3: E-Commerce App</h3>
+                <p>An elegant shopping platform developed using Flutter and Firebase.</p>
+                <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="content-section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+            <span>Node.js</span>
+            <span>Flutter</span>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio | Built with <i class="fas fa-heart"></i> by Your Name</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
